@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Manager Dashboard</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="dashboard">
+    <div class="dashboard-header">
+        <h1>Manager View: Approvals Overview</h1>
+        <button onclick="logout()">Logout</button>
+    </div>
+
+    <div class="table-container">
+        <table class="data-table" id="manager-approvals-table">
+            <thead>
+                <tr>
+                    <th>Project</th>
+                    <th>Date</th>
+                    <th>Employee</th>
+                    <th>Category</th>
+                    <th>Amount ($)</th>
+                    <th>Status</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody>
+            </tbody>
+        </table>
+    </div>
+</div>
+
+<div id="notification-box"></div>
+
+<script src="script.js"></script>
+</body>
+</html>

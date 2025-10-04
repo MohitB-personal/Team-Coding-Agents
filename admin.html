@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Admin Dashboard</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="dashboard">
+     <div class="dashboard-header">
+        <h1>Admin Dashboard</h1>
+        <button onclick="logout()">Logout</button>
+    </div>
+
+  <div class="card-grid">
+    <div class="card">
+      <h3>Employee View</h3>
+      <p>Access employee expense submission and history.</p>
+      <button onclick="window.location.href='employee.html'">Go</button>
+    </div>
+
+    <div class="card">
+      <h3>Manager View</h3>
+      <p>Access expense approval and reporting features.</p>
+      <button onclick="window.location.href='manager.html'">Go</button>
+    </div>
+  </div>
+</div>
+
+<div id="notification-box"></div>
+
+<script src="script.js"></script>
+</body>
+</html>

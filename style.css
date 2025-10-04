@@ -1,0 +1,355 @@
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif; 
+}
+
+body {
+    background: linear-gradient(135deg, #667eea, #764ba2);
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow-x: hidden;
+    color: #333;
+    flex-direction: column; 
+}
+
+.container {
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(10px);
+    padding: 40px 35px;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    width: 100%;
+    max-width: 450px;
+    text-align: center;
+    animation: fadeIn 1s ease forwards;
+}
+
+/* Fade-in animation */
+@keyframes fadeIn {
+    0% {opacity: 0; transform: translateY(-20px);}
+    100% {opacity: 1; transform: translateY(0);}
+}
+
+.container h2 {
+    font-size: 28px;
+    color: #764ba2;
+    margin-bottom: 25px;
+    font-weight: 700;
+}
+
+/* Input Fields */
+input, select, textarea {
+    width: 100%;
+    padding: 14px 16px;
+    margin-bottom: 18px;
+    border-radius: 10px;
+    border: 1px solid #ccc;
+    font-size: 15px;
+    transition: all 0.3s;
+}
+
+input:focus, select:focus, textarea:focus {
+    border-color: #764ba2;
+    box-shadow: 0 0 8px rgba(118, 75, 162, 0.3);
+    outline: none;
+}
+
+/* Button (General Styling) */
+button {
+    width: 100%;
+    padding: 14px 0;
+    background: linear-gradient(135deg, #764ba2, #667eea);
+    color: #fff;
+    font-size: 16px;
+    font-weight: 600;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: all 0.3s;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Button Hover Effect */
+button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+}
+
+/* Extra Links */
+.extra-links {
+    margin-top: 15px;
+}
+
+.extra-links a {
+    color: #764ba2;
+    font-weight: 500;
+    text-decoration: none;
+    transition: all 0.3s;
+}
+
+.extra-links a:hover {
+    text-decoration: underline;
+    color: #667eea;
+}
+
+/* Dashboard Layout */
+.dashboard {
+    background: #fff;
+    max-width: 1150px;
+    width: 95%;
+    min-height: 80vh; /* Added min-height to help with vertical centering */
+    margin: 50px auto;
+    padding: 35px;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    animation: fadeIn 1s ease forwards;
+    /* Added Flexbox to handle content alignment for the clean Admin view */
+    display: flex; 
+    flex-direction: column;
+}
+
+.dashboard-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.dashboard-header h1 {
+    font-size: 28px;
+    color: #764ba2;
+}
+
+.dashboard-header button, .dashboard .btn-action {
+    width: auto;
+    padding: 10px 22px;
+    font-size: 15px;
+    /* Overrides generic button width: 100% */
+}
+
+/* Card Grid for Admin View */
+.card-grid {
+    /* Updated for the Admin dashboard centering */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-grow: 1; /* Allows the grid to take up available vertical space */
+    flex-wrap: wrap; /* Allows wrapping on smaller screens */
+    gap: 50px; /* Increased gap for better spacing */
+    padding: 20px 0;
+}
+
+.card {
+    background: #fff;
+    padding: 30px;
+    border-radius: 15px;
+    /* Custom shadow matching the image appearance */
+    box-shadow: 0 10px 25px rgba(118, 75, 162, 0.1), 0 0 0 1px rgba(0, 0, 0, 0.05);
+    text-align: center;
+    transition: all 0.4s;
+    cursor: pointer;
+    max-width: 300px;
+    min-width: 250px;
+}
+
+.card:hover {
+    transform: translateY(-5px) scale(1.02);
+    box-shadow: 0 15px 35px rgba(118, 75, 162, 0.2);
+}
+
+.card h3 {
+    font-size: 22px;
+    margin-bottom: 12px;
+    color: #764ba2;
+}
+
+.card p {
+    font-size: 14px;
+    margin-bottom: 25px;
+    color: #555;
+}
+
+.card button {
+    padding: 12px 0;
+    background: linear-gradient(135deg, #764ba2, #667eea);
+    font-weight: 700;
+}
+
+/* --- Table Styles (Existing, kept for other pages) --- */
+.table-container {
+    overflow-x: auto;
+    margin-top: 25px;
+}
+
+.data-table {
+    width: 100%;
+    border-collapse: collapse;
+    min-width: 700px;
+}
+
+.data-table th, .data-table td {
+    border: 1px solid #eee;
+    padding: 15px 12px;
+    text-align: left;
+    font-size: 14px;
+}
+
+.data-table th {
+    background-color: #f4f4f9;
+    color: #764ba2;
+    text-transform: uppercase;
+    font-weight: 700;
+}
+/* ... (Rest of table/modal/notification styles omitted for brevity) ... */
+
+/* Status Badges */
+.status-badge {
+    padding: 5px 10px;
+    border-radius: 20px;
+    font-weight: bold;
+    font-size: 12px;
+    display: inline-block;
+}
+
+.status-pending {
+    background-color: #ffc10740;
+    color: #a07a00;
+}
+
+.status-approved {
+    background-color: #28a74540;
+    color: #196f3d;
+}
+
+.status-rejected {
+    background-color: #dc354540;
+    color: #983333;
+}
+
+/* Action Buttons */
+.action-buttons {
+    display: flex;
+    gap: 8px;
+}
+
+.action-buttons button {
+    padding: 8px 12px;
+    font-size: 12px;
+    width: auto;
+    background: #6c757d;
+}
+
+.action-buttons .btn-approve {
+    background: linear-gradient(45deg, #28a745, #196f3d);
+}
+.action-buttons .btn-reject {
+    background: linear-gradient(45deg, #dc3545, #c82333);
+}
+
+/* Filter/Search Bar */
+.filter-bar {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 20px;
+    flex-wrap: wrap;
+}
+
+.filter-bar input, .filter-bar select {
+    flex-grow: 1;
+    max-width: 250px;
+    margin-bottom: 0;
+}
+
+/* --- Modal Styles --- */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-content {
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 15px;
+    width: 90%;
+    max-width: 600px;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
+    position: relative;
+    animation: scaleIn 0.3s ease-out;
+}
+
+@keyframes scaleIn {
+    0% { transform: scale(0.9); opacity: 0; }
+    100% { transform: scale(1); opacity: 1; }
+}
+
+.close-btn {
+    color: #aaa;
+    position: absolute;
+    top: 15px;
+    right: 25px;
+    font-size: 36px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: color 0.2s;
+}
+
+.close-btn:hover, .close-btn:focus {
+    color: #764ba2;
+}
+
+.form-group {
+    text-align: left;
+}
+
+
+#notification-box {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #764ba2;
+    color: white;
+    padding: 15px 25px;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    display: none;
+    z-index: 1100;
+    font-weight: 500;
+    animation: slideIn 0.3s ease-out;
+}
+
+@keyframes slideIn {
+    from { transform: translateY(100px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+}
+
+
+@media (max-width: 768px) {
+    .dashboard-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 15px;
+    }
+    .dashboard-header button {
+        align-self: stretch;
+    }
+    .filter-bar input, .filter-bar select {
+        max-width: 100%;
+    }
+    .data-table {
+        min-width: 100%;
+    }
+}
